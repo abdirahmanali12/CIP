@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #ea7305;
+  --secondary: #cd6606;
+  --text-color: #4e4e4e;
+  --delete-color: #a70606;
+  --update-color: #04761d;
+  --header-text-color: white;
+  --font-family: "Montserrat", sans-serif;
+}
+
+.main-header {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+}
+.logo-and-searching-container {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.logo-con {
+  display: flex;
+  color: white;
+}
+.logo-con > span {
+  font-size: 35px;
+}
+.logo-con > h1 {
+  margin-left: 10px;
+  font-family: var(--font-family);
+}
+
+.search-con {
+  margin-left: 30px;
+  background-color: var(--secondary);
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+.search-con > span {
+  color: var(--header-text-color);
+  padding-right: 5px;
+  font-size: 14px;
+}
+.search-con > input {
+  background: none;
+  border: none;
+  color: var(--header-text-color);
+  outline: none;
+  font-size: 15px;
+}
+.search-con > input::placeholder {
+  color: #f3f3f3;
+  font-size: 15px;
+}
+.primary {
+  background-color: var(--primary);
+  min-width: 130px;
+}
+.btn {
+  text-align: center;
+  padding: 5px 20px;
+  color: var(--header-text-color);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.main-body {
+  width: 85%;
+  margin: 1.5% auto;
+}
+.main-body-header {
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 5px;
+}
+
+.customers-container {
+  margin-top: 2%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+.customer {
+  box-shadow: -2px 0px 5px 3px rgba(120, 117, 117, 0.25);
+  -webkit-box-shadow: -2px 0px 5px 3px rgba(120, 117, 117, 0.25);
+  -moz-box-shadow: -2px 0px 5px 3px rgba(120, 117, 117, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.customer-info {
+  padding: 0px;
+}
+.image {
+  text-align: center;
+  font-size: 50px;
+  color: var(--primary);
+}
+.c-title {
+  padding: 10px 15px;
+  text-align: center;
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+.c-title > h1 {
+  font-size: 17px;
+  padding-bottom: 5px;
+}
+
+.c-title > span {
+  font-size: 14px;
+}
+
+.customer > button {
+  margin: 5px 0px;
+}
