@@ -14,6 +14,38 @@
     />
   </head>
   <body>
+    <div class="model-container hide">
+      <div class="model-add">
+        <header class="m-add-header">
+          <h3>Add New Customer</h3>
+          <button class="btn-close">x</button>
+        </header>
+
+        <form id="regis-form">
+          <div class="title">
+            <label>Personal Information</label>
+          </div>
+
+          <input type="text" placeholder="Enter name" name="name" required />
+          <input type="email" placeholder="Enter email" name="email" required />
+          <input type="text" placeholder="Enter phone" name="phone" required />
+
+          <div class="title address">
+            <label>Address Information</label>
+          </div>
+          <input
+            type="text"
+            placeholder="Enter counrty"
+            name="country"
+            required
+          />
+          <input type="text" placeholder="Enter city" name="city" required />
+
+          <button class="btn primary submit" type="submit">SAVE</button>
+        </form>
+      </div>
+    </div>
+
     <header class="main-header">
       <div class="logo-and-searching-container">
         <div class="logo-con">
@@ -26,7 +58,7 @@
         </div>
       </div>
 
-      <button class="btn primary">
+      <button id="add" class="btn primary">
         <span><i class="fas fa-user-plus"></i></span>
         <span> Add New Customer</span>
       </button>
@@ -35,248 +67,14 @@
     <main class="main-body">
       <header class="main-body-header">
         <span>Our Customers Information</span>
-        <span>15 Of Current Customers</span>
+        <span></span>
       </header>
 
       <section class="customers-container">
         <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
-        <!-- customer -->
-        <div class="customer">
-          <header class="customer-info">
-            <div class="image">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="c-title">
-              <h1>Xafsa Abdullahi</h1>
-              <span>+252 615 528717</span>
-            </div>
-          </header>
-          <button class="btn primary">Profile</button>
-        </div>
       </section>
     </main>
-
-    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../js/main.js"></script>
   </body>
 </html>

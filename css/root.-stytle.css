@@ -4,7 +4,9 @@
   margin: 0;
   padding: 0;
 }
-
+body {
+  position: relative;
+}
 :root {
   --primary: #ea7305;
   --secondary: #cd6606;
@@ -12,6 +14,8 @@
   --delete-color: #a70606;
   --update-color: #04761d;
   --header-text-color: white;
+  --transprarent-color: #00000059;
+  --light-color: #eeeeee;
   --font-family: "Montserrat", sans-serif;
 }
 
@@ -89,7 +93,7 @@
   font-size: 14px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid var(--light-color);
   padding-bottom: 5px;
 }
 
@@ -132,4 +136,82 @@
 
 .customer > button {
   margin: 5px 0px;
+}
+
+/* models */
+.model-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: var(--transprarent-color);
+  transition: 1s;
+}
+
+.model-add {
+  background-color: var(--header-text-color);
+  width: 30%;
+  margin: 3% auto;
+  height: fit-content;
+  box-shadow: -2px 0px 5px 3px rgba(120, 117, 117, 0.25);
+  -webkit-box-shadow: -2px 0px 5px 3px rgba(120, 117, 117, 0.25);
+  -moz-box-shadow: -2px 0px 5px 3px rgba(120, 117, 117, 0.25);
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.m-add-header {
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--light-color);
+
+  align-items: center;
+  color: var(--text-color);
+}
+.m-add-header > h3 {
+  font-size: 16px;
+}
+.btn-close {
+  padding: 5px;
+  background: none;
+  border: none;
+  font-size: 21px;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+#regis-form {
+  margin: 20px auto;
+  text-align: center;
+}
+.title {
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 13px;
+  border-bottom: 1px solid var(--light-color);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#regis-form > input {
+  width: 100%;
+  margin: 8px 0px;
+  padding: 10px;
+  background-color: var(--light-color);
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+.address {
+  margin: 20px 0px 10px 0px;
+}
+.submit {
+  width: 70%;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.hide {
+  display: none;
 }
