@@ -1,30 +1,55 @@
 import { getAllCustomers, saveCustomerData } from "./dataSource.js";
-import { displayCustomer, toggleClass } from "./utililies.js";
+import { displayCustomer, removeCustomers, toggleClass } from "./utililies.js";
+
+const customerArray = async () => (await getAllCustomers()) || [];
 
 const addBtn = document.querySelector("#add");
 const [close] = document.querySelectorAll(".btn-close");
 const [modelContainer] = document.querySelectorAll(".model-container");
-
-const submit = document.querySelector("#regis-form");
+const resgisForm = document.querySelector("#regis-form");
+const [searchingForm] = document.querySelectorAll(".search-con");
+const [searchField] = document.getElementsByName("search");
 
 // open and close model
 addBtn.addEventListener("click", () => toggleClass(modelContainer));
 close.addEventListener("click", () => toggleClass(modelContainer));
-modelContainer.addEventListener("click", (e) => {
-  if (e.target == e.currentTarget) toggleClass(modelContainer);
+modelContainer.addEventListener(
+  "click",
+  (e) => e.target == e.currentTarget && toggleClass(modelContainer)
+);
+resgisForm.addEventListener("submit", saveCustomer);
+searchingForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const {
+    search: { value },
+  } = e.target;
+
+  searchCustomer(value);
 });
 
-const displayCustomers = async () => {
-  const customers = (await getAllCustomers()) || [];
+searchField.addEventListener("keyup", (e) => {
+  searchCustomer(e.target.value);
+});
 
+const searchCustomer = async (name) => {
+  removeCustomers();
+  const customers = await customerArray();
+  displayCustomers(
+    customers.filter((customer) =>
+      customer.name.toLowerCase().includes(name.toLowerCase())
+    )
+  );
+};
+
+const displayCustomers = (customers = []) => {
   customers.forEach((cusData) => {
     displayCustomer(cusData);
   });
 };
 
-displayCustomers();
+displayCustomers(await customerArray());
 
-const saveCustomer = (event) => {
+function saveCustomer(event) {
   event.preventDefault();
   const { name, phone, email, country, city } = event.target;
 
@@ -46,8 +71,4 @@ const saveCustomer = (event) => {
       toggleClass(modelContainer);
     }
   });
-
-  //   console.log(customer);
-};
-
-submit.addEventListener("submit", saveCustomer);
+}
