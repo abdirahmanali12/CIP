@@ -39,3 +39,27 @@ export const displayCustomer = (customerData = {}) => {
 export const removeCustomers = () => {
   document.querySelector(".customers-container").innerHTML = "";
 };
+
+// form validater
+export const validate = (
+  node,
+  messageInfo = "Please enter what we neaded",
+  predicate = (value) => false
+) => {
+  const isvalid = predicate(node.value.trim());
+  if (isvalid) return false;
+  const parentElement = node.parentElement;
+  const message = document.createElement("small");
+  message.textContent = messageInfo;
+  message.style.color = "red";
+  message.style.fontSize = "12px";
+  node.style.border = "1px solid red";
+  parentElement.appendChild(message);
+
+  setTimeout(() => {
+    node.style.border = "none";
+    parentElement.removeChild(message);
+  }, 5000);
+
+  return true;
+};

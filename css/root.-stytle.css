@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 body {
   position: relative;
@@ -150,7 +151,7 @@ body {
 
 .model-add {
   background-color: var(--header-text-color);
-  width: 30%;
+  width: 400px;
   margin: 3% auto;
   height: fit-content;
   box-shadow: -2px 0px 5px 3px rgba(120, 117, 117, 0.25);
@@ -193,8 +194,9 @@ body {
 
 #regis-form {
   margin: 20px auto;
-  text-align: center;
+  /* text-align: center; */
 }
+
 .title {
   color: var(--text-color);
   font-family: var(--font-family);
@@ -204,7 +206,7 @@ body {
   text-align: left;
 }
 
-#regis-form > input {
+#regis-form input {
   width: 100%;
   margin: 8px 0px;
   padding: 10px;
